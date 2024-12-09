@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "Header.h"
 
-int* get_num_matrix(matrix* Matrix, int x, int y) //присваивание значения
+int* get_num_matrix(matrix* Matrix, int x, int y)
 {
 	if (Matrix == NULL) 
 	{
@@ -12,7 +12,7 @@ int* get_num_matrix(matrix* Matrix, int x, int y) //присваивание значения
 	return &((Matrix->data)[x][y]);
 }
 
-void full_matrix(matrix* Matrix, int num) //заполнение матрицы
+void full_matrix(matrix* Matrix, int num)
 {
 	if (Matrix == NULL)
 	{
@@ -28,7 +28,7 @@ void full_matrix(matrix* Matrix, int num) //заполнение матрицы
 	}
 }
 
- matrix* create_matrix(int rows, int cols) //создание нулевой матрицы
+ matrix* create_matrix(int rows, int cols)
 {
 	matrix* Matrix = (matrix*)malloc(sizeof(matrix));
 
@@ -47,7 +47,7 @@ void full_matrix(matrix* Matrix, int num) //заполнение матрицы
 	return Matrix;
 }
 
- matrix* matrix_num(int rows, int cols, int num) //создание матрицы с указанным числом
+ matrix* matrix_num(int rows, int cols, int num)
  {
 	 matrix* Matrix = create_matrix(rows, cols);
 
@@ -56,7 +56,7 @@ void full_matrix(matrix* Matrix, int num) //заполнение матрицы
 	 return Matrix;
  }
 
- matrix* matrix_rand(int rows, int cols, int min, int max) //создание матрицы с рандомным числом
+ matrix* matrix_rand(int rows, int cols, int min, int max)
  {
 	 if (min > max)
 	 {
@@ -76,7 +76,7 @@ void full_matrix(matrix* Matrix, int num) //заполнение матрицы
 	 return Matrix;
  }
 
-void matrix_print(matrix* Matrix) //печать матрицы
+void matrix_print(matrix* Matrix)
 {
 	if (Matrix == NULL)
 	{
@@ -94,7 +94,7 @@ void matrix_print(matrix* Matrix) //печать матрицы
 	}
 }
 
-matrix* matrix_add(matrix* Matrix_A, matrix* Matrix_B) //сложение
+matrix* matrix_add(matrix* Matrix_A, matrix* Matrix_B)
 {
 	if ((Matrix_A == NULL) || (Matrix_B == NULL))
 	{
@@ -125,7 +125,7 @@ matrix* matrix_add(matrix* Matrix_A, matrix* Matrix_B) //сложение
 	}
 }
 
-matrix* matrix_sub(matrix* Matrix_A, matrix* Matrix_B) //вычитание
+matrix* matrix_sub(matrix* Matrix_A, matrix* Matrix_B)
 {
 	if ((Matrix_A == NULL) || (Matrix_B == NULL))
 	{
@@ -156,7 +156,7 @@ matrix* matrix_sub(matrix* Matrix_A, matrix* Matrix_B) //вычитание
 	}
 }
 
-matrix* matrix_multi(matrix* Matrix_A, matrix* Matrix_B) //умножение
+matrix* matrix_multi(matrix* Matrix_A, matrix* Matrix_B)
 {
 	if ((Matrix_A == NULL) || (Matrix_B == NULL))
 	{
@@ -194,7 +194,7 @@ matrix* matrix_multi(matrix* Matrix_A, matrix* Matrix_B) //умножение
 	}
 }
 
-matrix* matrix_trans(matrix* Matrix_A) //транспонирование
+matrix* matrix_trans(matrix* Matrix_A)
 {
 	if (Matrix_A == NULL)
 	{
@@ -217,7 +217,7 @@ matrix* matrix_trans(matrix* Matrix_A) //транспонирование
 	return Matrix;
 }
 
-matrix* matrix_copy(matrix* Matrix_A) //копирование
+matrix* matrix_copy(matrix* Matrix_A)
 {
 	if (Matrix_A == NULL)
 	{
@@ -240,7 +240,7 @@ matrix* matrix_copy(matrix* Matrix_A) //копирование
 	return Matrix;
 }
 
-void matrix_del(matrix* Matrix) //удаление
+void matrix_del(matrix* Matrix)
 {
 	if (Matrix == NULL)
 	{
@@ -255,7 +255,7 @@ void matrix_del(matrix* Matrix) //удаление
 	free(Matrix);
 }
 
-matrix* build_matrix(int rows, int cols, int mas[]) // создание матрицы вручную 
+matrix* build_matrix(int rows, int cols, int mas[]) 
 {
 	matrix* Matrix = create_matrix(rows, cols);
 
