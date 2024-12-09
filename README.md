@@ -1,6 +1,6 @@
 Описание функций:
 
-int* get_num_matrix(matrix* Matrix, int x, int y) - присваивание значения
+int* get_num_matrix(matrix* Matrix, int x, int y) - присваивание значения\n
 void full_matrix(matrix* Matrix, int num) - заполнение матрицы
 void matrix_print(matrix* Matrix) - печать матрицы
 void matrix_del(matrix* Matrix) - удаление
