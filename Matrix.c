@@ -252,6 +252,7 @@ void matrix_del(matrix* Matrix)
 		free(Matrix->data[x]);
 	}
 
+	free(Matrix->data);
 	free(Matrix);
 }
 
